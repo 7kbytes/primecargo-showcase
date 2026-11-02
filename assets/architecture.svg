@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Helvetica, Arial, sans-serif">
+  <title>Prime Expert Cargo system architecture</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0B0B0C"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2861E"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#0B0B0C;stroke-width:1.5}
+      .ink{fill:#0B0B0C}
+      .zone{fill:#F1F1EF;stroke:#DCDCD7;stroke-width:1}
+      .lbl{font:600 11px 'Courier New',monospace;letter-spacing:1.6px;fill:#54585D}
+      .h{font:800 17px Helvetica,Arial,sans-serif;fill:#0B0B0C;text-transform:uppercase}
+      .hw{font:800 17px Helvetica,Arial,sans-serif;fill:#fff}
+      .t{font:400 13px Helvetica,Arial,sans-serif;fill:#54585D}
+      .tw{font:400 13px Helvetica,Arial,sans-serif;fill:#D6D6D0}
+      .m{font:500 11.5px 'Courier New',monospace;fill:#0B0B0C}
+      .line{stroke:#0B0B0C;stroke-width:1.5;fill:none}
+      .gold{stroke:#C2861E;stroke-width:1.5;fill:none;stroke-dasharray:6 4}
+      .tag{font:600 10.5px 'Courier New',monospace;letter-spacing:1px;fill:#0B0B0C}
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <rect x="40" y="34" width="44" height="6" fill="#E0A030"/>
+  <rect x="40" y="45" width="32" height="6" fill="#0B0B0C"/>
+  <rect x="40" y="56" width="44" height="6" fill="#0B0B0C"/>
+  <text x="100" y="56" style="font:800 24px Helvetica,Arial,sans-serif" fill="#0B0B0C">PRIME EXPERT CARGO · HOW IT WORKS</text>
+  <text x="100" y="78" class="t">Three apps, one API and one database. Sign-in is handled by Firebase; roles live in the database.</text>
+
+  <!-- Users zone -->
+  <rect x="40" y="110" width="1120" height="190" class="zone"/>
+  <text x="58" y="132" class="lbl">PEOPLE AND APPS</text>
+
+  <!-- Customer web -->
+  <rect x="60" y="148" width="250" height="130" class="box"/>
+  <text x="78" y="176" class="h">Customer website</text>
+  <text x="78" y="198" class="t">Book, request quotes, track,</text>
+  <text x="78" y="216" class="t">notifications, saved addresses</text>
+  <text x="78" y="256" class="m">Next.js 14 · Tailwind</text>
+
+  <!-- Mobile -->
+  <rect x="330" y="148" width="250" height="130" class="box"/>
+  <text x="348" y="176" class="h">Mobile app</text>
+  <text x="348" y="198" class="t">Same customer features on</text>
+  <text x="348" y="216" class="t">Android and iOS</text>
+  <text x="348" y="256" class="m">Flutter · Material 3</text>
+
+  <!-- Admin -->
+  <rect x="600" y="148" width="250" height="130" class="box"/>
+  <text x="618" y="176" class="h">Admin dashboard</text>
+  <text x="618" y="198" class="t">Approve with quote and ETA,</text>
+  <text x="618" y="216" class="t">update status, view customers</text>
+  <text x="618" y="256" class="m">React · Vite · Ant Design</text>
+
+  <!-- Public tracking -->
+  <rect x="870" y="148" width="270" height="130" class="box" stroke-dasharray="5 4"/>
+  <text x="888" y="176" class="h">Anyone with a number</text>
+  <text x="888" y="198" class="t">Public tracking page.</text>
+  <text x="888" y="216" class="t">No account. No personal details.</text>
+  <text x="888" y="256" class="m">GET /public/track/:number</text>
+
+  <!-- Firebase -->
+  <rect x="40" y="360" width="290" height="150" class="box"/>
+  <rect x="40" y="360" width="290" height="6" fill="#E0A030"/>
+  <text x="60" y="394" class="h">Firebase Authentication</text>
+  <text x="60" y="418" class="t">Email and password, Google sign-in,</text>
+  <text x="60" y="436" class="t">email verification, password reset.</text>
+  <text x="60" y="454" class="t">Issues a signed ID token.</text>
+  <text x="60" y="490" class="m">identity only · no app data</text>
+
+  <!-- API -->
+  <rect x="420" y="340" width="420" height="200" fill="#0B0B0C"/>
+  <rect x="420" y="340" width="420" height="6" fill="#E0A030"/>
+  <text x="444" y="376" class="hw">REST API</text>
+  <text x="444" y="400" class="tw">1. Verifies the Firebase ID token on every request</text>
+  <text x="444" y="420" class="tw">2. Links the account and loads its role (customer / admin)</text>
+  <text x="444" y="440" class="tw">3. Enforces booking rules and the status flow</text>
+  <text x="444" y="460" class="tw">4. Rate limits, input validation, safe error messages</text>
+  <text x="444" y="480" class="tw">5. Sends an email at each step</text>
+  <text x="444" y="518" style="font:500 11.5px 'Courier New',monospace" fill="#E0A030">Node.js · Express · Prisma · Vercel serverless</text>
+
+  <!-- Email -->
+  <rect x="930" y="360" width="230" height="150" class="box"/>
+  <text x="950" y="394" class="h">Email</text>
+  <text x="950" y="418" class="t">Booking received, approved,</text>
+  <text x="950" y="436" class="t">rejected and every status</text>
+  <text x="950" y="454" class="t">update; new-booking alert</text>
+  <text x="950" y="472" class="t">to the office.</text>
+  <text x="950" y="496" class="m">SMTP or Resend</text>
+
+  <!-- DB -->
+  <rect x="420" y="600" width="420" height="120" class="box"/>
+  <text x="444" y="632" class="h">PostgreSQL database</text>
+  <text x="444" y="656" class="t">Users and roles · Bookings and quotes · Status history</text>
+  <text x="444" y="676" class="t">Notifications · Saved addresses</text>
+  <text x="444" y="704" class="m">Neon serverless Postgres · Prisma migrations</text>
+
+  <!-- Status flow -->
+  <rect x="40" y="600" width="330" height="120" class="zone"/>
+  <text x="58" y="624" class="lbl">SHIPMENT STATUS FLOW</text>
+  <text x="58" y="648" class="m">PENDING → APPROVED → PROCESSING</text>
+  <text x="58" y="666" class="m">→ PICKED UP → IN TRANSIT</text>
+  <text x="58" y="684" class="m">→ ARRIVED GHANA → CUSTOMS</text>
+  <text x="58" y="702" class="m">→ OUT FOR DELIVERY → DELIVERED</text>
+
+  <rect x="890" y="600" width="270" height="120" class="zone"/>
+  <text x="908" y="624" class="lbl">HOSTING</text>
+  <text x="908" y="648" class="t">Website, dashboard and API</text>
+  <text x="908" y="666" class="t">each deploy as a Vercel project.</text>
+  <text x="908" y="690" class="t">CI checks all four apps on</text>
+  <text x="908" y="708" class="t">every push (GitHub Actions).</text>
+
+  <!-- Arrows: apps -> Firebase (sign in) -->
+  <path d="M185 278 L185 360" class="gold" marker-end="url(#arrg)"/>
+  <path d="M455 278 L455 300 L270 300 L270 360" class="gold" marker-end="url(#arrg)"/>
+  <path d="M725 278 L725 310 L300 310 L300 360" class="gold" marker-end="url(#arrg)"/>
+  <rect x="96" y="318" width="80" height="18" fill="#fff"/>
+  <text x="102" y="331" class="tag">1 SIGN IN</text>
+
+  <!-- Apps -> API (token) -->
+  <path d="M500 278 L500 340" class="line" marker-end="url(#arr)"/>
+  <path d="M700 278 L700 340" class="line" marker-end="url(#arr)"/>
+  <path d="M1005 278 L1005 320 L800 320 L800 340" class="line" marker-end="url(#arr)"/>
+  <rect x="508" y="314" width="176" height="18" fill="#F1F1EF"/>
+  <text x="512" y="327" class="tag">2 HTTPS + BEARER TOKEN</text>
+
+  <!-- API -> Firebase verify -->
+  <path d="M420 440 L330 440" class="gold" marker-end="url(#arrg)"/>
+  <text x="338" y="432" class="tag">VERIFY</text>
+
+  <!-- API -> DB -->
+  <path d="M630 540 L630 600" class="line" marker-end="url(#arr)" marker-start="url(#arr)"/>
+  <text x="642" y="576" class="tag">3 READ / WRITE</text>
+
+  <!-- API -> Email -->
+  <path d="M840 440 L930 440" class="line" marker-end="url(#arr)"/>
+  <text x="852" y="432" class="tag">4 NOTIFY</text>
+</svg>
