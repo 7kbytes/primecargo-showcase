@@ -4,7 +4,7 @@
 
 **A full-stack logistics platform I designed and built: a Flutter mobile app, a Next.js customer website, a React operations dashboard and a Node.js API, all on Firebase Authentication and PostgreSQL.**
 
-[Demo video](assets/demo/prime-expert-cargo-demo.mp4) · [Screenshots](#screenshots) · [How it works](#how-it-works) · [Engineering highlights](#engineering-highlights) · [Live site](#try-it)
+[Demo video](assets/demo/prime-expert-cargo-demo.mp4) · [Screenshots](#screenshots) · [How it works](#how-it-works) · [Engineering highlights](#engineering-highlights) · [Live site](#try-it) · [Contact](#contact)
 
 ![Prime Expert Cargo walkthrough](assets/walkthrough.gif)
 
@@ -161,7 +161,14 @@ Most freight forwarders on this route still take bookings by phone and WhatsApp.
 
 Interested in working together or seeing more of my work?
 
+- **Email:** [7kbytesgh@gmail.com](mailto:7kbytesgh@gmail.com)
+- **Portfolio:** [portfolio-eta-ivory-yshi67xev0.vercel.app](https://portfolio-eta-ivory-yshi67xev0.vercel.app)
 - **GitHub:** [@7kbytes](https://github.com/7kbytes)
+
+**More of my work**
+
+- [Primahk](https://github.com/7kbytes/primahk-showcase): a classifieds marketplace for Ghana (Next.js, React Native, NestJS, PostgreSQL)
+- [Maestro Sports](https://github.com/7kbytes/maestrosports-showcase): a production website for a football management company in Dubai and Ghana (Next.js)
 
 ## All Rights Reserved
 
